@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Atmel Studio Solution File, Format Version 11.00
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "sketch_jul30a", "ArduinoSketch31\sketch_jul30a\sketch_jul30a.cppproj", "{DCE6C7E3-EE26-4D79-826B-08594B9AD897}"
+EndProject
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "ArduinoCore", "ArduinoSketch31\ArduinoCore\ArduinoCore.cppproj", "{4A924F53-8F5F-44CC-9ADF-4F1AFBD7972C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Debug|AVR.ActiveCfg = Debug|AVR
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Debug|AVR.Build.0 = Debug|AVR
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|AVR.ActiveCfg = Release|AVR
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|AVR.Build.0 = Release|AVR
+		{4A924F53-8F5F-44CC-9ADF-4F1AFBD7972C}.Debug|AVR.ActiveCfg = Debug|AVR
+		{4A924F53-8F5F-44CC-9ADF-4F1AFBD7972C}.Debug|AVR.Build.0 = Debug|AVR
+		{4A924F53-8F5F-44CC-9ADF-4F1AFBD7972C}.Release|AVR.ActiveCfg = Release|AVR
+		{4A924F53-8F5F-44CC-9ADF-4F1AFBD7972C}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
