@@ -22,7 +22,8 @@ ComwithDisplay.d ComwithDisplay.o: .././ComwithDisplay.cpp \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\version.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
- ..\\..\ArduinoCore\include\core/Printable.h
+ ..\\..\ArduinoCore\include\core/Printable.h \
+ ..\\..\ArduinoCore\include\core/WString.h
 
 .././ComwithDisplay.h:
 
@@ -71,3 +72,5 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h:
 
 ..\\..\ArduinoCore\include\core/Printable.h:
+
+..\\..\ArduinoCore\include\core/WString.h:

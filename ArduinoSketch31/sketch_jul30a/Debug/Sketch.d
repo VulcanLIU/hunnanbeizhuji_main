@@ -35,16 +35,12 @@ Sketch.d Sketch.o: .././Sketch.cpp \
  ..\\..\ArduinoCore\include\core/Arduino.h \
  ..\\..\ArduinoCore\include\variants\standard/pins_arduino.h \
  ..\include\libraries\Wire\src/Wire.h \
- ..\\..\ArduinoCore\include\core/Stream.h \
- ..\include\libraries\Adafruit-GFX-Library-master/Adafruit_GFX.h \
- ..\\..\ArduinoCore\include\core/Print.h \
- ..\include\libraries\Adafruit-GFX-Library-master/gfxfont.h \
- ..\include\libraries\Adafruit_SSD1306-master/Adafruit_SSD1306.h \
- ..\include\libraries\SPI\src/SPI.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\wdt.h \
- .././ComwithMotor.h .././ComwithRC.h \
+ ..\\..\ArduinoCore\include\core/Stream.h .././ComwithMotor.h \
+ .././ComwithRC.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\4.9.2\include\stdint-gcc.h \
- ..\\..\ArduinoCore\include\core/WString.h .././Kinematics.h
+ ..\\..\ArduinoCore\include\core/WString.h .././ComwithDisplay.h \
+ ..\include\libraries\SoftwareSerial\src/SoftwareSerial.h \
+ .././Kinematics.h
 
 ..\\..\ArduinoCore\include\core/Arduino.h:
 
@@ -120,18 +116,6 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 
 ..\\..\ArduinoCore\include\core/Stream.h:
 
-..\include\libraries\Adafruit-GFX-Library-master/Adafruit_GFX.h:
-
-..\\..\ArduinoCore\include\core/Print.h:
-
-..\include\libraries\Adafruit-GFX-Library-master/gfxfont.h:
-
-..\include\libraries\Adafruit_SSD1306-master/Adafruit_SSD1306.h:
-
-..\include\libraries\SPI\src/SPI.h:
-
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\wdt.h:
-
 .././ComwithMotor.h:
 
 .././ComwithRC.h:
@@ -139,5 +123,9 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\4.9.2\include\stdint-gcc.h:
 
 ..\\..\ArduinoCore\include\core/WString.h:
+
+.././ComwithDisplay.h:
+
+..\include\libraries\SoftwareSerial\src/SoftwareSerial.h:
 
 .././Kinematics.h:

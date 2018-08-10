@@ -28,7 +28,7 @@ public:
 	
 	void displayXYP(double,double,double);//显示XYP
 	
-	void dispyMsg(String);//显示状态信息
+	void displayMsg(String);//显示状态信息
 	
 	void systemOK();//系统OJBK;
 private:

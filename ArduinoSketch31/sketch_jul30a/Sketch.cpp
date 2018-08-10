@@ -15,8 +15,6 @@
  ComwithDisplay CD;
  Kinematics kin(90,0.068,0.4,8);
  
-void display_init();
-void display_report(String);
 void whichdisconnected();
 
 float linear_vel_x = 0;
@@ -28,31 +26,25 @@ float angular_vel_z = 0;
  String main_str = "";
 void setup() {
 	Serial.begin(9600);
+	
 	//显示器初始化
 	CD.systemInit();
 	
 	//电机上电自检
-	CD.displaySTR("Motor initing.");
+	CD.displaySTR("initing:");
+	
 	CM.begin();
 	if (CM.connectedRight())
 	{
-		CD.displaySTR("Links to Motors done!");
+			CD.displaySTR("|Links to Motors done!|");
+			Serial.println("|Links to Motors done!|");
 	}
 	else
 	{
-		whichdisconnected();
-		//while(1)
-		//{
-			////电机再次重启
-			//CM.begin();
-			//if (CM.connectedRight())
-			//{
-				//display_report("Links to Motors done!");
-				//break;
-			//}
-		//}
+			whichdisconnected();
+			CD.displaySTR("|Links to Motors done!|");
 	}
-	//delay(1000);
+	delay(1000);
 }
 
 void loop() {
@@ -66,13 +58,20 @@ void loop() {
 	
 	CM.SendAtoALL(rpm.motor1,rpm.motor2,rpm.motor3,rpm.motor4);
 	
-	Serial.print(rpm.motor1);
-	Serial.print("	");
-	Serial.print(rpm.motor2);
-	Serial.print("	");
-	Serial.print(rpm.motor3);
-	Serial.print("	");
-	Serial.println(rpm.motor4);
+	//Serial.print(rpm.motor1);
+	//Serial.print("	");
+	//Serial.print(rpm.motor2);
+	//Serial.print("	");
+	//Serial.print(rpm.motor3);
+	//Serial.print("	");
+	//Serial.println(rpm.motor4);
+	CD.systemInfo();
+	CD.displayWKST(true,true,true);
+	delay(10);
+	CD.displayXYP(5,5,5);
+	delay(10);
+	CD.displaySTR("SHOT");
+	delay(10);
 }
 
 void serialEvent()
@@ -95,39 +94,23 @@ void serialEvent()
 		}
 	}
 }
-void display_init()
-{
-	display.begin();
-	display.display();
-	delay(200);
-	display.clearDisplay();
-	display.setTextColor(WHITE);
-}
-
-void display_report(String str)
-{
-	display.print(millis());
-	display.print("ms-");
-	display.println(str);
-	display.display();
-}
 
 void whichdisconnected()
 {
 	if (!CM.connectedtoL1Right())
 	{
-		CD.ComwithDisplay("L1 disconnect");
+		CD.displaySTR("L1 disconnect");
 	}
 	if (!CM.connectedtoL2Right())
 	{
-		CD.ComwithDisplay("L2 disconnect");
+		CD.displaySTR("L2 disconnect");
 	}
 	if (!CM.connectedtoR1Right())
 	{
-		CD.ComwithDisplay("R1 disconnect");
+		CD.displaySTR("R1 disconnect");
 	}
 	if (!CM.connectedtoR2Right())
 	{
-		CD.ComwithDisplay("R2 disconnect");
+		CD.displaySTR("R2 disconnect");
 	}
 }

@@ -18,6 +18,7 @@ ComwithDisplay::ComwithDisplay()
 
 void ComwithDisplay::systemInit()
 {
+	mySerial.begin(9600);
 	mySerial.println("initing");
 }
 
@@ -35,9 +36,9 @@ void ComwithDisplay::systemInfo()
 void ComwithDisplay::displayWKST(bool _shot,bool _motors,bool _locate)
 {
 	String str_ = "WKST:";
-	if (_shot){str_+="|A:SHOT OK|";}else{str_+="|A:SHOT ERROR|"};
-	if (_motors){str_+="|B:MOTOR OK|";}else{str_+="|B:MOTOR ERROR|"};
-	if (_shot){str_+="|C:LOCATE OK|";}else{str_+="|C:LOCATE ERROR|"};
+	if (_shot){str_+="|A:SHOT OK|";}else{str_+="|A:SHOT ERROR|";}
+	if (_motors){str_+="|B:MOTOR OK|";}else{str_+="|B:MOTOR ERROR|";}
+	if (_shot){str_+="|C:LOCATE OK|";}else{str_+="|C:LOCATE ERROR|";}
 		
 	mySerial.println(str_);
 }
