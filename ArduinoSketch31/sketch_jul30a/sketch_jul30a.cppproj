@@ -142,6 +142,11 @@
       <Value>libm</Value>
     </ListValues>
   </avrgcccpp.linker.libraries.Libraries>
+  <avrgcccpp.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>I:\过去\arduino库文件及使用经历\freetype-2.4.0\freetype-2.4.0\include</Value>
+    </ListValues>
+  </avrgcccpp.linker.libraries.LibrarySearchPaths>
   <avrgcccpp.linker.miscellaneous.LinkerFlags>-Os</avrgcccpp.linker.miscellaneous.LinkerFlags>
   <avrgcccpp.assembler.general.IncludePaths>
     <ListValues>
@@ -239,6 +244,11 @@
       <Value>libm</Value>
     </ListValues>
   </avrgcccpp.linker.libraries.Libraries>
+  <avrgcccpp.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>I:\过去\arduino库文件及使用经历\freetype-2.4.0\freetype-2.4.0\include</Value>
+    </ListValues>
+  </avrgcccpp.linker.libraries.LibrarySearchPaths>
   <avrgcccpp.linker.miscellaneous.LinkerFlags>-Os</avrgcccpp.linker.miscellaneous.LinkerFlags>
   <avrgcccpp.assembler.general.IncludePaths>
     <ListValues>

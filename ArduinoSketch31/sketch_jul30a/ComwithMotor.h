@@ -23,6 +23,7 @@ public:
 	
 	ComwithMotor();
 	void begin();
+	void check();
 	int ReadBfrom(Motor);
 	void SendAtoALL(int,int,int,int);
 	void SendKtoALL(double,double,double);
@@ -31,16 +32,17 @@ public:
 	bool connectedtoL2Right();
 	bool connectedtoR1Right();
 	bool connectedtoR2Right();
-	
-private:
-	void getK();
-	void SendAto(Motor,int);
-	void SendKto(Motor,double,double,double);
 	bool connected = false;
 	bool connectedL1 = false;
 	bool connectedL2 = false;
 	bool connectedR1 = false;
 	bool connectedR2 = false;
+	
+private:
+	void getK();
+	void SendAto(Motor,int);
+	void SendKto(Motor,double,double,double);
+
 	
 }; //ComwithMotor
 

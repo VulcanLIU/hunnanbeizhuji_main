@@ -7,7 +7,7 @@
 
 
 #include "ComwithMotor.h"
-
+#include "HardwareSerial.h"
 // default constructor
 ComwithMotor::ComwithMotor()
 {
@@ -20,11 +20,13 @@ ComwithMotor::ComwithMotor()
 
 void ComwithMotor::begin()
 {
+	Wire.begin();
+	Serial.println("IN");
 	for (int i=0;i<=5;i++)
 	{
 			//上电给下面的板发送K值
 			SendKtoALL(kp,ki,kd);
-				
+			Serial.println("IN2");
 			//等待下面的板发送接收确认信号
 			int a = ReadBfrom(L1);
 			int b = ReadBfrom(L2);
@@ -45,6 +47,31 @@ void ComwithMotor::begin()
 			if (c == R1){connectedR1 = true;}
 			if (d == R2){connectedR2 = true;}
 	}
+	Serial.println("OUT");
+}
+
+void ComwithMotor::check()
+{
+	Serial.println("IN2");
+	//等待下面的板发送接收确认信号
+	int a = ReadBfrom(L1);
+	int b = ReadBfrom(L2);
+	int c = ReadBfrom(R1);
+	int d = ReadBfrom(R2);
+	if (a == L1 && b== L2 && c==R1 && d == R2)
+	{
+		connected = true;
+	}
+	else
+	{
+		connected = false;
+	}
+			
+	//分别看四个电机是否连接正常
+	if (a == L1){connectedL1 = true;}
+	if (b == L2){connectedL2 = true;}
+	if (c == R1){connectedR1 = true;}
+	if (d == R2){connectedR2 = true;}
 }
 
 int ComwithMotor::ReadBfrom(Motor m)
@@ -101,7 +128,7 @@ bool ComwithMotor::connectedtoR2Right()
 
 void ComwithMotor::SendAto(Motor m,int speed)
 {
-	Wire.begin();
+	
 	Wire.beginTransmission(m);
 	Wire.print("A:");
 	Wire.println(speed);
@@ -110,7 +137,6 @@ void ComwithMotor::SendAto(Motor m,int speed)
 
 void ComwithMotor::SendKto(Motor m,double _kp,double _ki,double _kd)
 {	
-	Wire.begin();
 	Wire.beginTransmission(m);
 	Wire.print("kp:");
 	Wire.print(_kp);

@@ -8,62 +8,91 @@
 
 #include "ComwithDisplay.h"
 
-SoftwareSerial mySerial(10, 11); // RX, TX
+#include "SoftwareSerial.h"
 
-// default constructor
+SoftwareSerial mySerial(10,11);//TX RX
+
 ComwithDisplay::ComwithDisplay()
 {
-	mySerial.begin(9600);
+	
 } //ComwithDisplay
 
 void ComwithDisplay::systemInit()
 {
 	mySerial.begin(9600);
-	mySerial.println("initing");
-}
-
-void ComwithDisplay::displaySTR(String str)
-{
-	str = "STR:"+str;
-	mySerial.println(str);
-}
-
-void ComwithDisplay::systemInfo()
-{
-	mySerial.println("information");
-}
-
-void ComwithDisplay::displayWKST(bool _shot,bool _motors,bool _locate)
-{
-	String str_ = "WKST:";
-	if (_shot){str_+="|A:SHOT OK|";}else{str_+="|A:SHOT ERROR|";}
-	if (_motors){str_+="|B:MOTOR OK|";}else{str_+="|B:MOTOR ERROR|";}
-	if (_shot){str_+="|C:LOCATE OK|";}else{str_+="|C:LOCATE ERROR|";}
-		
-	mySerial.println(str_);
-}
-
-void ComwithDisplay::displayXYP(double _X,double _Y,double _P)
-{
-	String str_ = "XYP:";
-	str_ += "X:";
-	str_ += _X;
-	str_ += "Y:";
-	str_ += _Y;
-	str_ += "P:";
-	str_ += _P;
 	
-	mySerial.println(str_);
+	displayMsg("System");
 }
 
-void ComwithDisplay::systemOK()
+void ComwithDisplay::displayMotors(bool l1,bool l2,bool r1,bool r2)
 {
-	mySerial.println("OK");
+	mySerial.begin(9600);
+	String _str = "MOTORS:";
+	if (l1)
+	{
+		_str+="L1 ";
+	}
+	if (l2)
+	{
+		_str+="L2 ";
+	}
+	if (r1)
+	{
+		_str+="R1 ";
+	}
+	if (r2)
+	{
+		_str+="R2 ";
+	}
+	//displayMsg("Sys");
+	mySerial.println(_str);
+}
+
+void ComwithDisplay::displaySHOT(bool sright)
+{
+	String _str = "SHOT:";
+	if (sright)
+	{
+		_str += "ON";
+	}
+	else
+	{
+		_str += "OFF";
+	}
+	mySerial.println(_str);
+}
+
+void ComwithDisplay::displayPOS(bool pright)
+{
+	String _str = "POS:";
+	if (pright)
+	{
+		_str += "ON";
+	}
+	else
+	{
+		_str += "OFF";
+	}
+	mySerial.println(_str);
+}
+ 
+void ComwithDisplay::displayXYP(double x,double y,double p)
+{
+	String _str = "XYP:";
+	_str += "x:";
+	_str += x;
+	_str += "y:";
+	_str += y;
+	_str += "p:";
+	_str += p;
+	
+	mySerial.println(_str);
 }
 
 void ComwithDisplay::displayMsg(String str)
 {
-	str = "Msg:"+str;
-	this->displaySTR(str);
+	String _str = "Msg:";
+	_str += str;
+	
+	mySerial.println(_str);
 }
-

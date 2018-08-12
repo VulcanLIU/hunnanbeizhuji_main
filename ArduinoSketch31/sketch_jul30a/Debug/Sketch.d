@@ -39,7 +39,6 @@ Sketch.d Sketch.o: .././Sketch.cpp \
  .././ComwithRC.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\4.9.2\include\stdint-gcc.h \
  ..\\..\ArduinoCore\include\core/WString.h .././ComwithDisplay.h \
- ..\include\libraries\SoftwareSerial\src/SoftwareSerial.h \
  .././Kinematics.h
 
 ..\\..\ArduinoCore\include\core/Arduino.h:
@@ -125,7 +124,5 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\
 ..\\..\ArduinoCore\include\core/WString.h:
 
 .././ComwithDisplay.h:
-
-..\include\libraries\SoftwareSerial\src/SoftwareSerial.h:
 
 .././Kinematics.h:
