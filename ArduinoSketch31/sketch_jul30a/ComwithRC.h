@@ -18,25 +18,16 @@ public:
 	ComwithRC();
 	
 	void recived(String);
-	
-	//私有成员的封装
-	int getVX() const { return VX; }
-	void setVX(int8_t val) { VX = val; }
-		
-	int getVY() const { return VY; }
-	void setVY(int8_t val) { VY = val; }
-		
-	int getVZ() const { return VZ; }
-	void setVZ(int8_t val) { VZ = val; }
 		
 	String str_VX = "";
 	String str_VY = "";
 	String str_VZ = "";
-protected:
-private:
-	int VX = 0;
-	int VY = 0;
-	int VZ = 0;
+	String str_shot = "";
+
+	double VX = 0;
+	double VY = 0;
+	double VZ = 0;
+	int shot = 0;
 	
 }; //ComwithRC
 

@@ -62,7 +62,9 @@ SUBDIRS :=  \
 C_SRCS +=  \
 ../ComwithDisplay.cpp \
 ../ComwithMotor.cpp \
+../ComwithPOS.cpp \
 ../ComwithRC.cpp \
+../ComwithShot.cpp \
 ../DisplayBuff.cpp \
 ../Kinematics.cpp \
 ../Sketch.cpp \
@@ -85,7 +87,9 @@ ASM_SRCS +=
 OBJS +=  \
 ComwithDisplay.o \
 ComwithMotor.o \
+ComwithPOS.o \
 ComwithRC.o \
+ComwithShot.o \
 DisplayBuff.o \
 Kinematics.o \
 Sketch.o \
@@ -101,7 +105,9 @@ src/libraries/Wire/src/Wire.o
 OBJS_AS_ARGS +=  \
 ComwithDisplay.o \
 ComwithMotor.o \
+ComwithPOS.o \
 ComwithRC.o \
+ComwithShot.o \
 DisplayBuff.o \
 Kinematics.o \
 Sketch.o \
@@ -117,7 +123,9 @@ src/libraries/Wire/src/Wire.o
 C_DEPS +=  \
 ComwithDisplay.d \
 ComwithMotor.d \
+ComwithPOS.d \
 ComwithRC.d \
+ComwithShot.d \
 DisplayBuff.d \
 Kinematics.d \
 Sketch.d \
@@ -133,7 +141,9 @@ src/libraries/Wire/src/Wire.d
 C_DEPS_AS_ARGS +=  \
 ComwithDisplay.d \
 ComwithMotor.d \
+ComwithPOS.d \
 ComwithRC.d \
+ComwithShot.d \
 DisplayBuff.d \
 Kinematics.d \
 Sketch.d \
@@ -161,6 +171,10 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
+
+
+
+
 
 
 

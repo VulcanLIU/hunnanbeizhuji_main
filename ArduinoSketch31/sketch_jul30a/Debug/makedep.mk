@@ -6,7 +6,11 @@ ComwithDisplay.cpp
 
 ComwithMotor.cpp
 
+ComwithPOS.cpp
+
 ComwithRC.cpp
+
+ComwithShot.cpp
 
 DisplayBuff.cpp
 

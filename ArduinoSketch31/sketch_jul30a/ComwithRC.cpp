@@ -23,15 +23,16 @@ void ComwithRC::recived(String str)
 	int pos_VX = str.indexOf("X:");
 	int pos_VY = str.indexOf("Y:");
 	int pos_VZ = str.indexOf("P:");
+	int pos_shot = str.indexOf("SHOT:");
 	
 	str_VX = str.substring(pos_VX+2,pos_VY);
 	str_VY = str.substring(pos_VY+2,pos_VZ);
-	str_VZ= str.substring(pos_VZ+2);
+	str_VZ= str.substring(pos_VZ+2,pos_shot);
+	str_shot = str.substring(pos_shot);
 	
 	VX = str_VX.toDouble();
 	VY = str_VY.toDouble();
 	VZ = str_VZ.toDouble();
-	
-
+	shot = str_shot.toInt();
 }
 
