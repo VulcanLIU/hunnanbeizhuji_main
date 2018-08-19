@@ -14,7 +14,7 @@
 ComwithPOS::ComwithPOS()
 {
 
-} //ComwithPOS
+} //ComwithPOSffdfdfdfdfdfdfdf
 
 void ComwithPOS::begin()
 {
